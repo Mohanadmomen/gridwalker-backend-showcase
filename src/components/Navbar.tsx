@@ -2,8 +2,8 @@ import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 
 const links = [
-  { label: "Stack", href: "#stack" },
   { label: "Projects", href: "#projects" },
+  { label: "Stack", href: "#stack" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
