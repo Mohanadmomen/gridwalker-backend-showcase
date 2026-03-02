@@ -4,7 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({base: '/gridwalker-backend-showcase/',plugins: [react()], mode }) => ({
+export default defineConfig(({ mode }) => ({
+  // The base path must be inside this return object
+  base: '/gridwalker-backend-showcase/', 
   server: {
     host: "::",
     port: 8080,
@@ -12,7 +14,10 @@ export default defineConfig(({base: '/gridwalker-backend-showcase/',plugins: [re
       overlay: false,
     },
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
