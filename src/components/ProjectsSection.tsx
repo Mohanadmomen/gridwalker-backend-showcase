@@ -16,7 +16,7 @@ const projects = [
     description:
       "Built a high-performance numerical analysis toolkit with optimized algorithms for Newton-Raphson root finding and Gaussian Elimination. Focused on computational efficiency, precision handling, and clean architecture for mathematical operations.",
     techs: ["C++", "Qt Framework", "Newton-Raphson", "Gaussian Elimination"],
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=450&fit=crop",
+    image: "./QT_UI.png",
   },
 ];
 
