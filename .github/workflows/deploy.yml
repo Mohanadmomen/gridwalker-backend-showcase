@@ -26,8 +26,11 @@ jobs:
         run: npm install
 
       - name: Build
-        # We add the base flag here as well to ensure the build path is hardcoded
-        run: npm run build -- --base=/Portfolio_v1.0/
+        run: npm run build
+
+      - name: Disable Jekyll
+        # This stops GitHub from hiding necessary React files
+        run: touch dist/.nojekyll
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
