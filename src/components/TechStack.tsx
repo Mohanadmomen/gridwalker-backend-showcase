@@ -7,6 +7,8 @@ const techs = [
   { name: "RESTful APIs", icon: "🔗" },
   { name: "JWT Auth", icon: "🔐" },
   { name: "Entity Framework", icon: "📦" },
+  { name: "Python", icon: "🐍" },
+  { name: "C++", icon: "⚡" },
 ];
 
 const container = {
@@ -38,7 +40,7 @@ const TechStack = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-3"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3"
           variants={container}
           initial="hidden"
           whileInView="show"

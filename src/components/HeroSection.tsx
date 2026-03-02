@@ -31,18 +31,27 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <p className="font-mono text-primary text-sm tracking-widest uppercase mb-4">
-            // Backend Engineer
+            // Backend Engineer &amp; AI Enthusiast
           </p>
         </motion.div>
 
         <motion.h1
-          className="font-heading text-5xl md:text-7xl font-bold tracking-tight mb-6"
+          className="font-heading text-5xl md:text-7xl font-bold tracking-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          Mohanad<span className="text-primary">.</span>
+          Mohanad Momen<span className="text-primary">.</span>
         </motion.h1>
+
+        <motion.p
+          className="font-mono text-xs text-muted-foreground mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          B.E. Computer Engineering &bull; GPA 3.2
+        </motion.p>
 
         <motion.p
           className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed"
@@ -50,9 +59,10 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
         >
-          Computer Engineering student specializing in building{" "}
-          <span className="text-foreground font-medium">scalable backend systems</span>{" "}
-          with <span className="text-primary font-mono">.NET</span>
+          Computer Engineering student specializing in{" "}
+          <span className="text-foreground font-medium">backend development</span>,{" "}
+          <span className="text-primary font-mono">AI integration</span>, and building
+          scalable systems with <span className="text-primary font-mono">.NET</span>
         </motion.p>
 
         <motion.div
