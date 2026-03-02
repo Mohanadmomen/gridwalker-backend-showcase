@@ -6,15 +6,15 @@ const projects = [
     title: "AI-Driven Dermatological Diagnostic System",
     tag: "AI + Backend",
     description:
-      "Engineered the backend infrastructure for an AI-powered diagnostic platform. Integrated machine learning models with a robust API layer, enabling real-time dermatological analysis and research-grade data pipelines.",
-    techs: ["ASP.NET Core", "REST API", "AI Integration", "SQL Server"],
+      "Engineered the backend infrastructure for an AI-powered diagnostic platform. Integrated a CNN model for classifying skin lesions with high accuracy, connected to a robust REST API layer for real-time dermatological analysis and research-grade data pipelines.",
+    techs: ["ASP.NET Core", "REST API", "CNN / Deep Learning", "SQL Server", "Python"],
   },
   {
     title: "QT-Based Numerical Analysis Suite",
-    tag: "Algorithms",
+    tag: "C++ + Qt",
     description:
-      "Built a high-performance numerical analysis toolkit featuring complex algorithmic implementations. Focused on computational efficiency, precision handling, and clean architecture for mathematical operations.",
-    techs: ["C++", "Qt Framework", "Numerical Methods", "Performance Optimization"],
+      "Built a high-performance numerical analysis toolkit with optimized algorithms for Newton-Raphson root finding and Gaussian Elimination. Focused on computational efficiency, precision handling, and clean architecture for mathematical operations.",
+    techs: ["C++", "Qt Framework", "Newton-Raphson", "Gaussian Elimination"],
   },
 ];
 
