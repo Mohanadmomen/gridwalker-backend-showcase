@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 const info = [
   { icon: Mail, label: "Email", value: "mohanadmomen25@gmail.com", href: "mailto:mohanadmomen25@gmail.com" },
-  { icon: Phone, label: "Phone", value: "+20 xxx xxx xxxx", href: null },
+  { icon: Phone, label: "Phone", value: "+20 109 477 1552", href: null },
   { icon: MapPin, label: "Location", value: "Egypt", href: null },
 ];
 
