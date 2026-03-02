@@ -11,12 +11,12 @@ const techs = [
 
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.45, ease: "easeOut" as const } },
 };
 
 const TechStack = () => {
@@ -24,9 +24,10 @@ const TechStack = () => {
     <section className="py-24 px-6" id="stack">
       <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <p className="font-mono text-primary text-sm tracking-widest uppercase mb-2">
             // Tech Stack
@@ -47,7 +48,8 @@ const TechStack = () => {
             <motion.div
               key={tech.name}
               variants={item}
-              className="group flex items-center gap-3 p-4 rounded-lg border border-border bg-card transition-all hover:glow-border-hover cursor-default"
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+              className="group flex items-center gap-3 p-4 rounded-lg border border-border bg-card transition-shadow cursor-default hover:glow-border-hover"
             >
               <span className="text-xl">{tech.icon}</span>
               <span className="font-mono text-sm text-secondary-foreground group-hover:text-foreground transition-colors">

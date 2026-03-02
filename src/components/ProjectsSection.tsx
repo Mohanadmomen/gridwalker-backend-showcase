@@ -20,12 +20,12 @@ const projects = [
 
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.15 } },
+  show: { transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 };
 
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
 const ProjectsSection = () => {
@@ -33,9 +33,10 @@ const ProjectsSection = () => {
     <section className="py-24 px-6" id="projects">
       <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <p className="font-mono text-primary text-sm tracking-widest uppercase mb-2">
             // Featured Projects
@@ -56,7 +57,8 @@ const ProjectsSection = () => {
             <motion.article
               key={project.title}
               variants={item}
-              className="group relative p-6 rounded-lg border border-border bg-card transition-all hover:glow-border-hover"
+              whileHover={{ scale: 1.02, transition: { duration: 0.25 } }}
+              className="group relative p-6 rounded-lg border border-border bg-card transition-shadow hover:glow-border-hover cursor-default"
             >
               <div className="flex items-start justify-between mb-3">
                 <div>
